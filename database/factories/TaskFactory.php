@@ -16,7 +16,7 @@
 
 $factory->define(App\Task::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->randomDigit(1,46),
+        'user_id' => $faker->numberBetween(1,46),
         'title' => $faker->sentence(4,true),
         'body' => $faker->realText(400,2), // secret
         'completed' => $faker->boolean(),
